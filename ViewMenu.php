@@ -53,13 +53,13 @@ if(!isset($_SESSION['username'])&&!isset($_SESSION['restaurantname']))
 {
 ?>
 <script>
-window.location = "./Login.php";
 alert("Please Login as customer To Order");
+window.location = "./Login.php";
 </script>
 <?php } elseif(isset($_SESSION['restaurantname'])) { ?>
 <script>
-window.location = "./ViewMenu.php";
 alert("Restaurants cannot order");
+window.location = "./ViewMenu.php";
 </script>
 <?php } else{
   include './dbConnect.php';
