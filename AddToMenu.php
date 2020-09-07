@@ -43,7 +43,7 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
                         <span class="label">Image For Food Item</span><input type="file" class="form-control" id="image"
                             name="image">
                     </div>
-                    <center><button type="submit" class="btn btn-primary" name="submit" id="submit">Register</button>
+                    <center><button type="submit" class="btn btn-primary" name="submit" id="submit">Add Item</button>
                     </center>
 
                 </form>

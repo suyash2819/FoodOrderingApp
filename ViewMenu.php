@@ -40,6 +40,13 @@
             </div>
             <?php
                  }
+             }else
+             {
+                 ?>
+            <script>
+            alert("None of the restaurants have added any item yet");
+            </script>
+            <?php
              }   
             ?>
         </div>
