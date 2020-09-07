@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row center">
             <div class="card" style="width: 50%;height:30rem;">
-                <img class='card-img' src="./Images/restaurant.jpg" alt="Card image cap">
+                <img class='card-img' src="./Images/Restaurant.jpg" alt="Card image cap">
             </div>
             <div class="card" style="width: 50%;height:30rem">
 

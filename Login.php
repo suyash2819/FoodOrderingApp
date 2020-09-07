@@ -17,7 +17,7 @@
             <div class="card" style="width: 50%;height:30rem">
                 <center>
                     <h5 class="card-title" style="margin-top:15px;">
-                        Login as Customer/Restaurant`
+                        Login as Customer/Restaurant
                     </h5>
                 </center>
                 <form method="post" id="register-form">
