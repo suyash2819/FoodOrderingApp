@@ -1,0 +1,28 @@
+body {
+  background-color: #101010;
+}
+form {
+  margin-top: 5%;
+}
+
+input {
+  width: 50% !important;
+  margin: 0 auto;
+}
+.label {
+  margin-left: 25% !important;
+}
+.card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+.card {
+  border: none !important;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
