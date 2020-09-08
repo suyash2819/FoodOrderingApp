@@ -25,7 +25,7 @@
                     <div class="form-group">
                         <span class="label">Restaurant Contact Number</span>
                         <input type="tel" class="form-control" id="phone" name="contact"
-                            placeholder="Enter Contact Number" required>
+                            placeholder="Enter Contact Number" pattern="^[0-9]\d{9}$" required>
                     </div>
 
                     <div class="form-group">
@@ -64,7 +64,7 @@
         $address=cleanData($_POST['address']);
         $email=cleanData($_POST['email']);
         $password=$_POST['pass'];  
-        $checkEmail="SELECT * FROM restaurants WHERE Email='$email'";
+        $checkEmail="SELECT * FROM restaurants r, customer c WHERE r.Email='$email' or c.Email='$email'";
         $runqueryemail=mysqli_query($conn,$checkEmail);
         if(mysqli_num_rows($runqueryemail) > 0)
         {
