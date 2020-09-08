@@ -36,8 +36,8 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
                     </div>
 
                     <div class="form-group">
-                        <span class="label">Price/span> <input type="number" class="form-control" id="price"
-                                placeholder="Enter Price in rs" name="price" required>
+                        <span class="label">Price</span> <input type="number" class="form-control" id="price"
+                            placeholder="Enter Price in rs" name="price" required>
                     </div>
                     <div class="form-group">
                         <span class="label">Image For Food Item</span><input type="file" class="form-control" id="image"
