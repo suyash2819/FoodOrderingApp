@@ -3,7 +3,7 @@
 <head>
     <title>FoodShala</title>
     <?php include './links.php'?>
-    <link rel="stylesheet" type="text/css" href="CSS/Home.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Index.css">
 </head>
 
 <body>

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <?php include 'links.php'?>
+    <?php include 'links.php'; ?>
     <link rel="stylesheet" type="text/css" href="CSS/Restaurant.css">
 
 </head>
@@ -57,13 +57,13 @@
     $error=array();
     
     if(isset($_POST['submit'])){
+        include './dbConnect.php';
         $restid="";
         $name=cleanData($_POST['fullname']);
         $contactno=cleanData($_POST['contact']);
         $address=cleanData($_POST['address']);
         $email=cleanData($_POST['email']);
         $password=$_POST['pass'];  
-        include './dbConnect.php';
         $checkEmail="SELECT * FROM restaurants WHERE Email='$email'";
         $runqueryemail=mysqli_query($conn,$checkEmail);
         if(mysqli_num_rows($runqueryemail) > 0)
@@ -88,9 +88,8 @@
 
     function register($restid,$name,$contactno,$address,$email,$password)
     {
-    include './dbConnect.php';
-
-    $hashedpwd=md5($password);
+     $hashedpwd=md5($password); 
+     include './dbConnect.php'; 
     $query="INSERT INTO restaurants VALUES('$restid','$name','$contactno','$address','$email','$hashedpwd')";
     if(mysqli_query($conn, $query)){
     ?>

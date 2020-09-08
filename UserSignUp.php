@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <?php include 'links.php'?>
+    <?php include 'links.php';   ?>
     <link rel="stylesheet" type="text/css" href="CSS/UserSignUp.css">
 
 </head>
@@ -65,6 +65,8 @@
     $error=array();
     
     if(isset($_POST['submit-user'])){
+
+        include './dbConnect.php';
         $uid="";
         $name=cleanData($_POST['fullname']);
         $contactno=cleanData($_POST['contact']);
@@ -72,7 +74,6 @@
         $preference=cleanData($_POST['preference']);
         $email=cleanData($_POST['email']);
         $password=$_POST['pass'];  
-        include './dbConnect.php';
         $checkEmail="SELECT * FROM customer WHERE Email='$email'";
         $runqueryemail=mysqli_query($conn,$checkEmail);
         if(mysqli_num_rows($runqueryemail) > 0)
@@ -80,6 +81,7 @@
             ?>
     <script>
     alert("Email is already in use");
+    window.location = "./UserSignUp.php";
     </script>
     <?php
     exit;
@@ -97,9 +99,10 @@
 
     function register($uid,$name,$contactno,$address,$preference,$email,$password)
     {
-    include './dbConnect.php';
-
+   
     $hashedpwd=md5($password);
+
+    include './dbConnect.php';
     $query="INSERT INTO customer VALUES('$uid','$name','$contactno','$address','$preference','$email','$hashedpwd')";
     if(mysqli_query($conn, $query)){
     ?>

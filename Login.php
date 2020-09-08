@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <?php include 'links.php'?>
+    <?php include 'links.php';    ?>
     <link rel="stylesheet" type="text/css" href="CSS/Login.css">
 
 </head>
@@ -41,7 +41,7 @@
 
 $email=isset($_POST['email'])?$_POST['email']:"";
 $password=isset($_POST['password'])?$_POST['password']:"";
- 
+
  if(isset($_POST['submit'])){
    login($email,$password);
  }
@@ -56,20 +56,14 @@ $password=isset($_POST['password'])?$_POST['password']:"";
 
   function login($email,$password)
   {
-    if(empty($email)||empty($password)){
-        ?>
-    <script>
-    alert("Password and Email both are required for logging in")
-    </script>
-    <?php exit; } 
-   else{
+    
+   
     $email=cleanData($_POST['email']);
-    $password=cleanData($_POST['password']);
-    include './dbConnect.php';
-
+    $password=$_POST['password'];
     $hashedpwd=md5($password);
-
-    $queryuser="SELECT * FROM customer WHERE Email='$email' and Password='$hashedpwd'";
+    
+    include './dbConnect.php';
+    $queryuser="SELECT * FROM customer WHERE Email='$email' AND Pwd='$hashedpwd'";
     $queryrunuser=mysqli_query($conn,$queryuser);
     $queryrest="SELECT * FROM restaurants WHERE Email='$email' and Password='$hashedpwd'";
     $queryrunrest=mysqli_query($conn,$queryrest);
@@ -104,9 +98,9 @@ $password=isset($_POST['password'])?$_POST['password']:"";
     else { ?>
     <script>
     alert("wrong email or password");
-    window.location = "./Index.php";
+    window.location = "./Login.php";
     </script>
-    <?php } } } ?>
+    <?php } } ?>
 </body>
 
 </html>

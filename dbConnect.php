@@ -1,5 +1,5 @@
 <?php
-  
+ 
 
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
@@ -38,4 +38,5 @@ $db['default'] = array(
     'failover' => array(),
     'save_queries' => TRUE
 );
-?>
+
+ ?>
