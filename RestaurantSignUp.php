@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group">
                         <span class="label">Password</span><input type="password" class="form-control"
-                            id="exampleInputPassword1" placeholder="Password" name="pass" required>
+                            id="exampleInputPassword1" placeholder="Password" name="pass" minlength="6" required>
                     </div>
                     <center><button type="submit" class="btn btn-primary" name="submit">Register</button></center>
                 </form>

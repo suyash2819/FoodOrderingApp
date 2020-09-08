@@ -24,7 +24,7 @@
 
                     <div class="form-group">
                         <span class="label">Email</span>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email"
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"
                             required>
                     </div>
                     <div class="form-group">

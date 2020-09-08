@@ -25,7 +25,7 @@
                     <div class="form-group">
                         <span class="label">Contact Number</span>
                         <input type="tel" class="form-control" id="phone" name="contact"
-                            placeholder="Enter Contact Number" required>
+                            placeholder="Enter Contact Number" minlength="10" maxlength="10" required>
                     </div>
                     <div class="form-group">
                         <span class="label">Address</span> <input type="text" class="form-control" id="address"
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <span class="label">Password</span><input type="password" class="form-control"
-                            id="exampleInputPassword1" placeholder="Password" name="pass" required>
+                            id="exampleInputPassword1" placeholder="Password" name="pass" minlength="6" required>
                     </div>
                     <center><button type="submit" class="btn btn-primary" name="submit-user"
                             value="Register">Register</button>
