@@ -63,7 +63,7 @@ $password=isset($_POST['password'])?$_POST['password']:"";
     $hashedpwd=md5($password);
     
     include './dbConnect.php';
-    $queryuser="SELECT * FROM customer WHERE Email='$email' AND Pwd='$hashedpwd'";
+    $queryuser="SELECT * FROM customer WHERE Email='$email' AND Password='$hashedpwd'";
     $queryrunuser=mysqli_query($conn,$queryuser);
     $queryrest="SELECT * FROM restaurants WHERE Email='$email' and Password='$hashedpwd'";
     $queryrunrest=mysqli_query($conn,$queryrest);
